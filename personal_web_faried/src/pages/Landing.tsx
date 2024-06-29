@@ -1,4 +1,4 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import React from "react";
 import { Card, CardHeader, CardFooter, Image } from "@nextui-org/react";
 import faried from "../assets/faried.png";
@@ -14,6 +14,12 @@ import { IoLogoCss3 } from "react-icons/io";
 import { Button } from "@nextui-org/react";
 import uiux from "../assets/uiux2.jpg";
 import frontend from "../assets/frontend.jpg";
+import sb from "../assets/Redesign Landing Starbucks.png";
+import { Link } from "@nextui-org/react";
+import bca from "../assets/Porto Mbanking.png";
+import { Accordion, AccordionItem } from "@nextui-org/react";
+import webdev from "../assets/pkl.png";
+import { MdFileDownload } from "react-icons/md";
 
 const Landing = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -101,6 +107,8 @@ const Landing = () => {
         </div>
       </div>
       {/*close content*/}
+
+      {/*skills*/}
       <div className="skills bg-[#100F0F] min-h-[300px] px-[35px] pb-[30px]">
         <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[40px]">Skills</h2>
         <div className="skills-container flex flex-col items-center md:flex-row md:justify-center gap-[40px]">
@@ -142,6 +150,151 @@ const Landing = () => {
           </Card>
         </div>
       </div>
+      {/*end of skills*/}
+
+      {/*project*/}
+      <div className="project-body px-[35px]">
+        <h2 className="flex justify-end text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[40px]">Project</h2>
+        <div className="project-container">
+          {/*card 1*/}
+          <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
+            <div className="project-card-1-left">
+              <img src={sb} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+            </div>
+            <div className="project-card-1-right">
+              <h2 className="mt-[20px] md:mt-0 font-semibold md:text-[20px] lg:text-[25px]">Redesign Starbucks Web</h2>
+              <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light mt-[20px] lg:mt-[50px] md:w-[400px] lg:w-[650px]">
+                I redesigned Starbucks Coffee's landing page, starting with Figma for UI design inspired by Dribbble.com. Using React Vite, Tailwind CSS, and pure CSS, I created a responsive and appealing layout, resulting in an interactive
+                landing page that maintains Starbucks Coffee's identity while offering a modern user experience.
+              </h2>
+              <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[70px]">Visit Design and Code</h2>
+              <div className="git-code mt-[20px]">
+                <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px]">Dribbble.com</Button>
+                <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white">Github</Button>
+              </div>
+              <Link isExternal href="#" showAnchorIcon className="text-white text-[14px] md:text-[20px] md:hidden mt-[40px] md:mt-[40px] flex ">
+                See More About FrontEnd Projects
+              </Link>
+            </div>
+          </div>
+          <Link isExternal href="#" showAnchorIcon className="text-white text-[14px] hidden  md:text-[20px] mt-[20px] md:mt-[40px] md:flex justify-center md:justify-start">
+            See More About FrontEnd Projects
+          </Link>
+
+          {/*end of card 1*/}
+
+          {/*card 2*/}
+          <div className="project-card-1 flex flex-col-reverse items-center md:flex-row md:items-center md:justify-between md:gap-[30px] mt-[70px]">
+            <div className="project-card-1-right">
+              <h2 className="mt-[20px] md:mt-0 font-semibold md:text-[20px] lg:text-[25px]">Redesign BCA Mobile Banking</h2>
+              <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light mt-[20px] lg:mt-[50px] md:w-[400px] lg:w-[650px]">
+                I have successfully undertaken a UI redesign for the BCA Mobile application in response to prevalent feedback that its interface appeared dated and unengaging. Through a meticulous process, I have revitalized the UI, imbuing
+                it with a captivating and contemporary aesthetic, addressing the perceived shortcomings and ensuring a more alluring and modern user experience.
+              </h2>
+              <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[70px]">Visit Design</h2>
+              <div className="git-code mt-[20px]">
+                <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px]">Dribbble.com</Button>
+              </div>
+              <Link isExternal href="#" showAnchorIcon className="text-white text-[14px] mb-[40px] md:text-[20px] md:hidden mt-[40px] md:mt-[40px] flex ">
+                See More About UI/UX Projects
+              </Link>
+            </div>
+            <div className="project-card-1-left">
+              <img src={bca} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+            </div>
+          </div>
+          <Link isExternal href="#" showAnchorIcon className="text-white text-[14px] hidden  md:text-[20px] mt-[20px] md:mt-[40px] md:flex justify-center md:justify-end pb-[35px]">
+            See More About UI/UX Projects
+          </Link>
+
+          {/*end of card 2*/}
+        </div>
+      </div>
+      {/*end of project*/}
+
+      {/*accordion certif*/}
+      <div className="accordion bg-[#100F0F] px-[35px]">
+        <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[30px]">Certification</h2>
+        <Accordion>
+          <AccordionItem key="1" aria-label="Accordion 1" subtitle="May 2021 - June 2021 " title="Web Developer (Internship)" classNames={{ title: "text-white" }}>
+            {/*certif 1*/}
+            <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
+              <div className="project-card-1-left">
+                <img src={webdev} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+              </div>
+              <div className="project-card-1-right">
+                <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
+                  I had the opportunity to intern as a web developer specializing in WordPress at the Mathematics Department of As-Syafi'iyah Islamic University in Jakarta. During this internship, I diligently worked on various projects,
+                  ensuring timely and accurate completion of all tasks assigned to me. My commitment to excellence and punctuality was reflected in the quality of my work and my ability to meet deadlines consistently.
+                </h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Department of As-Syafi'iyah Islamic University</h2>
+                <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Online [Remote]</h2>
+                <div className="git-code mt-[20px]">
+                  <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[100px]">
+                    Download{" "}
+                    <span>
+                      <MdFileDownload className="text-white text-[16px]" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            {/*end of certif 1*/}
+          </AccordionItem>
+          <AccordionItem key="2" aria-label="Accordion 1" subtitle="May 2021 - June 2021 " title="Web Developer (Internship)" classNames={{ title: "text-white" }}>
+            {/*certif 2*/}
+            <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
+              <div className="project-card-1-left">
+                <img src={webdev} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+              </div>
+              <div className="project-card-1-right">
+                <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
+                  I had the opportunity to intern as a web developer specializing in WordPress at the Mathematics Department of As-Syafi'iyah Islamic University in Jakarta. During this internship, I diligently worked on various projects,
+                  ensuring timely and accurate completion of all tasks assigned to me. My commitment to excellence and punctuality was reflected in the quality of my work and my ability to meet deadlines consistently.
+                </h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Department of As-Syafi'iyah Islamic University</h2>
+                <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Online [Remote]</h2>
+                <div className="git-code mt-[20px]">
+                  <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[100px]">
+                    Download{" "}
+                    <span>
+                      <MdFileDownload className="text-white text-[16px]" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            {/*end of certif 2*/}
+          </AccordionItem>
+          <AccordionItem key="3" aria-label="Accordion 1" subtitle="May 2021 - June 2021 " title="Web Developer (Internship)" classNames={{ title: "text-white" }}>
+            {/*certif 3*/}
+            <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
+              <div className="project-card-1-left">
+                <img src={webdev} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+              </div>
+              <div className="project-card-1-right">
+                <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
+                  I had the opportunity to intern as a web developer specializing in WordPress at the Mathematics Department of As-Syafi'iyah Islamic University in Jakarta. During this internship, I diligently worked on various projects,
+                  ensuring timely and accurate completion of all tasks assigned to me. My commitment to excellence and punctuality was reflected in the quality of my work and my ability to meet deadlines consistently.
+                </h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Department of As-Syafi'iyah Islamic University</h2>
+                <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Online [Remote]</h2>
+                <div className="git-code mt-[20px]">
+                  <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[100px]">
+                    Download{" "}
+                    <span>
+                      <MdFileDownload className="text-white text-[16px]" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            {/*end of certif 3*/}
+          </AccordionItem>
+        </Accordion>
+      </div>
+
+      {/*end of accordion courses*/}
     </div>
   );
 };
