@@ -20,6 +20,10 @@ import bca from "../assets/Porto Mbanking.png";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import webdev from "../assets/pkl.png";
 import { MdFileDownload } from "react-icons/md";
+import cisco from "../assets/bootcamp_cisco.jpg";
+import udemy from "../assets/responsivehomepage.jpg";
+import sanbercode from "../assets/sanbercod.png";
+import ase from "../assets/Sertifikat Workshop ASE Lab-11-1.png";
 
 const Landing = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -92,7 +96,7 @@ const Landing = () => {
             <h2 className="text-[20px] font-semibold lg:text-[40px] lg:font-light">Halo I'm</h2>
             <h2 className="text-[35px] font-bold lg:text-[70px] bg-gradient-to-r from-[#00E0FF] via-[#4CFFC9] to-[#C8009C] bg-clip-text text-transparent animate-gradient-x">Faried Gunawan</h2>
             <h2 className="text-[15px] font-medium text-center md:text-justify lg:text-[20px]">
-              Active student of telkom university informatics study program, has interest and expertise in frontend developer & UI/UX designer, learns independently and continues to develop skills.
+              Active student of telkom university informatics study program, has interest and expertise in Front-end developer & UI/UX designer, learns independently and continues to develop skills.
             </h2>
             <div className="left-img flex text-[35px] gap-[20px] mt-[20px] md:text-[40px] md:gap-[60px]">
               <FaFigma />
@@ -241,18 +245,19 @@ const Landing = () => {
             </div>
             {/*end of certif 1*/}
           </AccordionItem>
-          <AccordionItem key="2" aria-label="Accordion 1" subtitle="May 2021 - June 2021 " title="Web Developer (Internship)" classNames={{ title: "text-white" }}>
+          <AccordionItem key="2" aria-label="Accordion 1" subtitle="Jun 2022 - Oct 2022 " title="CCNA Cisco Certification (Course)" classNames={{ title: "text-white" }}>
             {/*certif 2*/}
             <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
               <div className="project-card-1-left">
-                <img src={webdev} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+                <img src={cisco} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
               </div>
               <div className="project-card-1-right">
                 <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
-                  I had the opportunity to intern as a web developer specializing in WordPress at the Mathematics Department of As-Syafi'iyah Islamic University in Jakarta. During this internship, I diligently worked on various projects,
-                  ensuring timely and accurate completion of all tasks assigned to me. My commitment to excellence and punctuality was reflected in the quality of my work and my ability to meet deadlines consistently.
+                  I completed an online CCNA bootcamp course, where I gained a comprehensive understanding of Cisco networking, from basic concepts to advanced techniques. The program included hands-on labs and exercises, allowing me to
+                  apply theoretical knowledge in practical scenarios. I also completed a final project, designing and implementing a network infrastructure, which demonstrated my ability to apply what I learned. This online course enhanced
+                  both my technical skills and my ability to manage my time effectively.
                 </h2>
-                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Department of As-Syafi'iyah Islamic University</h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">ID-Networkers Indonesia</h2>
                 <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Online [Remote]</h2>
                 <div className="git-code mt-[20px]">
                   <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[100px]">
@@ -266,18 +271,45 @@ const Landing = () => {
             </div>
             {/*end of certif 2*/}
           </AccordionItem>
-          <AccordionItem key="3" aria-label="Accordion 1" subtitle="May 2021 - June 2021 " title="Web Developer (Internship)" classNames={{ title: "text-white" }}>
+          <AccordionItem key="3" aria-label="Accordion 1" subtitle="Nov 2022 - Nov 2022 " title="Design a Responsive Home Page (Course)" classNames={{ title: "text-white" }}>
             {/*certif 3*/}
             <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
               <div className="project-card-1-left">
-                <img src={webdev} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+                <img src={udemy} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
               </div>
               <div className="project-card-1-right">
                 <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
-                  I had the opportunity to intern as a web developer specializing in WordPress at the Mathematics Department of As-Syafi'iyah Islamic University in Jakarta. During this internship, I diligently worked on various projects,
-                  ensuring timely and accurate completion of all tasks assigned to me. My commitment to excellence and punctuality was reflected in the quality of my work and my ability to meet deadlines consistently.
+                  I completed a focused Udemy course on designing responsive UIs using Figma, which provided an in-depth understanding of responsive design principles in just one hour. The course emphasized creating interfaces that adapt
+                  seamlessly to various screen sizes and devices. Through hands-on tutorials, I learned to leverage Figma's tools to design user-friendly and visually appealing interfaces. This experience not only strengthened my technical
+                  skills in UI design but also improved my efficiency, enabling me to apply responsive design principles to real-world projects and ensure a consistent user experience across platforms.
                 </h2>
-                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Department of As-Syafi'iyah Islamic University</h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Udemy</h2>
+                <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Online [Remote]</h2>
+                <div className="git-code mt-[20px]">
+                  <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[80px]">
+                    Download{" "}
+                    <span>
+                      <MdFileDownload className="text-white text-[16px]" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            {/*end of certif 3*/}
+          </AccordionItem>
+          <AccordionItem key="4" aria-label="Accordion 4" subtitle="Jan 2023 - Feb 2023 " title="React Native Mobile Developer (Course)" classNames={{ title: "text-white" }}>
+            {/*certif 4*/}
+            <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
+              <div className="project-card-1-left">
+                <img src={sanbercode} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+              </div>
+              <div className="project-card-1-right">
+                <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
+                  I completed a comprehensive course on mobile development with React Native, progressing from a beginner to an expert level. The course covered everything from designing intuitive UI layouts to implementing state management
+                  with Redux. Throughout the program, I gained hands-on experience by building fully functional mobile applications, from the initial design phase to deployment. This course equipped me with the skills necessary to develop
+                  robust, user-friendly apps and deepened my understanding of mobile development using React Native.
+                </h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Sanbercode</h2>
                 <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Online [Remote]</h2>
                 <div className="git-code mt-[20px]">
                   <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[100px]">
@@ -289,7 +321,33 @@ const Landing = () => {
                 </div>
               </div>
             </div>
-            {/*end of certif 3*/}
+            {/*end of certif 4*/}
+          </AccordionItem>
+          <AccordionItem key="5" aria-label="Accordion 5" subtitle="Sep 2023 - Sep 2023 " title="Software Modeling (Workshop)" classNames={{ title: "text-white" }}>
+            {/*certif 5*/}
+            <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
+              <div className="project-card-1-left">
+                <img src={ase} className="w-[300px] md:w-[450px] lg:w-[700px]" alt="" />
+              </div>
+              <div className="project-card-1-right">
+                <h2 className="w-[300px] text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[30px] text-justify font-light md:w-[400px] mt-[20px] lg:mt-0 lg:w-[650px]">
+                  I participated in a workshop on the fundamentals of software design, where I learned the entire process from creating case studies to solving complex problems. The workshop provided a solid foundation in software design
+                  principles, guiding me through the stages of analyzing requirements, developing solutions, and implementing effective designs. Through practical exercises and real-world examples, I gained valuable insights into the
+                  software design process, enhancing my ability to approach and resolve design challenges systematically.
+                </h2>
+                <h2 className="text-[12px] md:text-[20px] font-semibold mt-[20px] lg:mt-[30px]">Advanced Software Engineering Laboratory</h2>
+                <h2 className="text-[12px] text-[#17F020] md:text-[20px] font-semibold mt-[20px] lg:mt-[50px]">Onsite</h2>
+                <div className="git-code mt-[20px]">
+                  <Button className="bg-transparent text-[12px] md:text-[18px] border-2 border-white text-white mr-[20px] lg:mt-[80px]">
+                    Download{" "}
+                    <span>
+                      <MdFileDownload className="text-white text-[16px]" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            {/*end of certif 4*/}
           </AccordionItem>
         </Accordion>
       </div>
