@@ -24,6 +24,12 @@ import cisco from "../assets/bootcamp_cisco.jpg";
 import udemy from "../assets/responsivehomepage.jpg";
 import sanbercode from "../assets/sanbercod.png";
 import ase from "../assets/Sertifikat Workshop ASE Lab-11-1.png";
+import { FaHammer } from "react-icons/fa6";
+import { FaProjectDiagram } from "react-icons/fa";
+import { BiCertification } from "react-icons/bi";
+import { FaCodepen } from "react-icons/fa";
+import estehsolo from "../assets/estehsolo.png";
+import griche from "../assets/griche.png";
 
 const Landing = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -114,7 +120,12 @@ const Landing = () => {
 
       {/*skills*/}
       <div className="skills bg-[#100F0F] min-h-[300px] px-[35px] pb-[30px]">
-        <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[40px]">Skills</h2>
+        <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[40px] flex items-center">
+          Skills{" "}
+          <span>
+            <FaHammer className="lg:text-[35px] text-[20px] ml-[10px] text-white" />
+          </span>
+        </h2>
         <div className="skills-container flex flex-col items-center md:flex-row md:justify-center gap-[40px]">
           <Card isFooterBlurred className="w-[300px] h-[200px] md:w-[400px] md:h-[300px] lg:w-[490px] lg:h-[350px] col-span-12 sm:col-span-7">
             <CardHeader className="absolute z-10 top-1 flex-col items-start">
@@ -158,7 +169,12 @@ const Landing = () => {
 
       {/*project*/}
       <div className="project-body px-[35px]">
-        <h2 className="flex justify-end text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[40px]">Project</h2>
+        <h2 className="flex justify-end text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[40px] items-center">
+          Project{" "}
+          <span>
+            <FaProjectDiagram className="lg:text-[35px] text-[20px] ml-[10px] text-white" />
+          </span>
+        </h2>
         <div className="project-container">
           {/*card 1*/}
           <div className="project-card-1 flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-[30px]">
@@ -217,8 +233,13 @@ const Landing = () => {
       {/*end of project*/}
 
       {/*accordion certif*/}
-      <div className="accordion bg-[#100F0F] px-[35px]">
-        <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[30px]">Certification</h2>
+      <div className="accordion bg-[#100F0F] px-[35px] pb-[20px]">
+        <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[30px] flex items-center">
+          Certification{" "}
+          <span>
+            <BiCertification className="lg:text-[35px] text-[20px] ml-[10px] text-white" />
+          </span>
+        </h2>
         <Accordion>
           <AccordionItem key="1" aria-label="Accordion 1" subtitle="May 2021 - June 2021 " title="Web Developer (Internship)" classNames={{ title: "text-white" }}>
             {/*certif 1*/}
@@ -351,8 +372,56 @@ const Landing = () => {
           </AccordionItem>
         </Accordion>
       </div>
-
       {/*end of accordion courses*/}
+
+      {/*our project*/}
+      <div className="our-project-container mt-[20px] px-[35px]">
+        <div className="our-project-content flex flex-col">
+          <div className="title-project flex justify-end">
+            <h2 className="text-[20px] sm:text-[25px] lg:text-[35px] pt-[20px] mb-[30px] flex items-center">
+              FrontEnd Project{" "}
+              <span>
+                <FaCodepen className="lg:text-[35px] text-[20px] ml-[10px] text-white" />
+              </span>
+            </h2>
+          </div>
+          <div className="title-project-card flex justify-center">
+            <div className="flex flex-wrap justify-center gap-[40px]">
+              <Card isFooterBlurred className="w-[300px] h-[200px] md:w-[300px] md:h-[200px] lg:w-[500px] lg:h-[300px] col-span-12 sm:col-span-7">
+                <Image removeWrapper alt="Relaxing app background" className="z-0 w-full h-full object-cover" src={estehsolo} />
+                <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                  <div className="flex flex-grow gap-2 items-center">
+                    <FaReact className="text-white text-[25px]" />
+                    <div className="flex flex-col">
+                      <p className="text-tiny text-white">Redesign Es Teh Solo Landing Page</p>
+                      <p className="text-tiny text-white/60">Get my project website</p>
+                    </div>
+                  </div>
+                  <Button radius="full" size="sm">
+                    Visit
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Card isFooterBlurred className="w-[300px] h-[200px] md:w-[300px] md:h-[200px] lg:w-[500px] lg:h-[300px] col-span-12 sm:col-span-7">
+                <Image removeWrapper alt="Relaxing app background" className="z-0 w-full h-full object-cover" src={griche} />
+                <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
+                  <div className="flex flex-grow gap-2 items-center">
+                    <FaReact className="text-white text-[25px]" />
+                    <div className="flex flex-col">
+                      <p className="text-tiny text-white">Landin Page + Order Griche</p>
+                      <p className="text-tiny text-white/60">Get my project website</p>
+                    </div>
+                  </div>
+                  <Button radius="full" size="sm">
+                    Visit
+                  </Button>
+                </CardFooter>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*end of our project*/}
     </div>
   );
 };
